@@ -82,9 +82,9 @@ fi
 RET=$?; if [ $RET -ne 0 ];
 
 then echo "Error. Exiting."; exit $RET;
-
+autoconf
 fi
-
+./configure
 
 ./.luarocks/bin/luarocks install lua-cjson
 
@@ -148,7 +148,7 @@ cd tg
 
 if [ $RET -ne 0 ]; then
 
-autoconf -i
+autoconf 
 
 fi
 
